@@ -64,7 +64,7 @@ export default function Header() {
                     >
                         <GiHamburgerMenu />
                     </button>
-                    <img src="/images/header/main-logo.svg" alt="" className={`2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-12 sm:pl-12 ${isSmallScreen ? "pl-12" : ""} ${isSmallestScreen ? " w-[120px] " : ""}  mx-0`} />
+                    <img src="/images/header/main-logo.webp" alt="" className={`2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-12 sm:pl-12 ${isSmallScreen ? "pl-12 w-[145px]" : "w-[145px]"} ${isSmallestScreen ? " w-[120px] " : ""}  mx-0`} />
 
                     
                     <div className={`2xl:flex xl:flex lg:flex md:hidden sm:hidden ${isSmallScreen ? "hidden" : ""} w-fit bg-[#F0F0F0] rounded-[46px] border border-[#D2D3CE] gap-x-6 items-center font-bauhaus`}>

@@ -7,6 +7,7 @@ import Benefits from "@/components/Benefits";
 import BriefIntro from "@/components/BriefIntro";
 import Story from "@/components/Story";
 import HomePageBannerSecond from "@/components/HomePageBannerSecond";
+import Process from "@/components/Process";
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
       <BriefIntro/>
       <Story/>
       <HomePageBannerSecond/>
-      
+      <Process/>
     </div>
   );
 }

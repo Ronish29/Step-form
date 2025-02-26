@@ -55,9 +55,9 @@ const HomePageBanner = () => {
                         </span>
 
                         <img
-                            src="/images/homepage-banner/banner-image.png"
+                            src="/images/homepage-banner/banner-image.webp"
                             alt="Stepform product"
-                            className={`mt-6 ${mounted && isSmallScreen ? "mt-4 " : ""}`}
+                            className={`mt-6 2xl:w-[509px] 2xl:h-[437px] xl:w-[509px] xl:h-[437px] lg:w-auto lg:h-auto ${mounted && isSmallScreen ? "mt-4 " : ""}`}
                         />
                     </div>
                     <span className={`font-helveticaNeue font-bold inline 

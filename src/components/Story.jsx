@@ -33,22 +33,22 @@ const Story = () => {
         {
             title: "Foot Shape Scanning",
             subTitle: "Upon receiving the foot impression box, we scan it to obtain the client's preliminary foot shape data.",
-            url: "/images/story-icons/foot-shape.svg"
+            url: "/images/story-icons/foot-shape.webp"
         },
         {
             title: "Podiatrist-Approved Materials",
             subTitle: "A podiatrist analyzes data to identify areas for improvement and specifies materials needed, communicated to the designer.",
-            url: "/images/story-icons/materials.svg"
+            url: "/images/story-icons/materials.webp"
         },
         {
             title: "Insole Design",
             subTitle: "The designer uses advanced software to create a custom insole design, sent to CNC milling for fabrication.",
-            url: "/images/story-icons/insole-design.svg"
+            url: "/images/story-icons/insole-design.webp"
         },
         {
             title: "Finalization & Delivery",
             subTitle: "After the orthotics are cleaned, packed, and prepared, they are shipped directly to your door via courier.",
-            url: "/images/story-icons/delivery.svg"
+            url: "/images/story-icons/delivery.webp"
         }
     ]
 

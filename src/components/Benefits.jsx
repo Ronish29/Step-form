@@ -32,17 +32,17 @@ const Benefits = () => {
         {
             title: "Personalized for You",
             subTitle: "Each pair is handcrafted to fit your feet perfectly, providing superior comfort and support.",
-            url: "/images/benefits/personalized-logo.svg"
+            url: "/images/benefits/personalized-logo.webp"
         },
         {
             title: "Pain Relief & Comfort",
             subTitle: "Say goodbye to foot, knee, and back pain. Our orthotics help alleviate discomfort and promote movement.",
-            url: "/images/benefits/pain-relief-logo.svg"
+            url: "/images/benefits/pain-relief-logo.webp"
         },
         {
             title: "Affordable & Risk-Free",
             subTitle: "Enjoy high-quality custom orthotics at a fraction of the cost of providers. Plus, we offer a money-back guarantee.",
-            url: "/images/benefits/affordable-logo.svg"
+            url: "/images/benefits/affordable-logo.webp"
         }
     ]
 
@@ -87,18 +87,18 @@ const Benefits = () => {
 
                     </div>
                 </div>
-                <div className="relative flex justify-center items-center">
+                <div className="relative flex justify-center items-center 2xl:w-1/2 xl:w-1/2 lg:w-1/2">
                     <div className={`absolute bg-[#E6F9FB] rounded-full 
                             2xl:w-[645px] 2xl:h-[645px] 
                             xl:w-[500px] xl:h-[500px] 
-                            lg:w-[400px] lg:h-[400px] 
+                            lg:w-[350px] lg:h-[350px] 
                             md:w-[300px] md:h-[300px]
                             sm:w-[250px] sm:h-[250px]
                             ${isSmallestScreen ? "w-[180px] h-[180px] " : isSmallScreen ? "w-[250px] h-[250px] mt-10" : ""}
                             `}>
                     </div>
 
-                    <img src="/images/benefits/product.png" alt="" className={`relative z-10 2xl:w-[100%] xl:w-[80%] lg:w-[70%] md:w-[50%] sm:w-[50%] ${isSmallestScreen ? "w-[60%]" : isSmallScreen ? "w-[60%]" : ""}`} />
+                    <img src="/images/benefits/benefit-product.webp" alt="" className={`relative z-10 2xl:w-[100%] xl:w-[80%] lg:w-[90%] md:w-[50%] sm:w-[50%] ${isSmallestScreen ? "w-[60%]" : isSmallScreen ? "w-[60%]" : ""}`} />
                 </div>
 
             </div>

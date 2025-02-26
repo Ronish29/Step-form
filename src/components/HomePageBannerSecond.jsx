@@ -28,9 +28,9 @@ const HomePageBannerSecond = () => {
     }, []);
 
     const productData = [
-        { url: "/images/homepage-banner-second/product-1.png" },
-        { url: "/images/homepage-banner-second/product-2.png" },
-        { url: "/images/homepage-banner-second/product-3.png" },
+        { url: "/images/homepage-banner-second/product-1.webp" },
+        { url: "/images/homepage-banner-second/product-2.webp" },
+        { url: "/images/homepage-banner-second/product-3.webp" },
     ]
 
     return (
@@ -89,7 +89,7 @@ const HomePageBannerSecond = () => {
 
                 <div className="flex flex-col 2xl:flex-row justify-evenly items-center 2xl:h-[500px] relative gap-12 2xl:gap-0 mb-12">
                     <div className="relative">
-                        <img src="/images/homepage-banner/banner-image.png" alt="" width={500} height={515} className="z-10 relative " />
+                        <img src="/images/homepage-banner/banner-image.webp" alt="" width={500} height={515} className="z-10 relative " />
                         <div className="bg-[#C8FFA6] absolute z-0 left-0 bottom-10 w-[90px] h-[92px] rounded-md"></div>
                     </div>
 

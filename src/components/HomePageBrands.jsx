@@ -53,12 +53,12 @@ const HomePageBrands = () => {
   }, []);
 
   const brandData = [
-    { url: "/images/homepage-brands/brand-circle.svg" },
-    { url: "/images/homepage-brands/brand-amara.svg" },
-    { url: "/images/homepage-brands/brand-aven.svg" },
-    { url: "/images/homepage-brands/brand-earth.svg" },
-    { url: "/images/homepage-brands/brand-goldline.svg" },
-    { url: "/images/homepage-brands/brand-utosia.svg" },
+    { url: "/images/homepage-brands/brand-circle.webp" },
+    { url: "/images/homepage-brands/brand-amara.webp" },
+    { url: "/images/homepage-brands/brand-aven.webp" },
+    { url: "/images/homepage-brands/brand-earth.webp" },
+    { url: "/images/homepage-brands/brand-goldline.webp" },
+    { url: "/images/homepage-brands/brand-utosia.webp" },
   ];
 
   return (
