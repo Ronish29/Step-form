@@ -12,21 +12,7 @@ export default function Header() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
 
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-    const [isSmallestScreen, setIsSmallestScreen] = useState(false);
 
-    useEffect(() => {
-        const checkMediaQueries = () => {
-            setIsSmallScreen(window.matchMedia('(max-width: 640px)').matches);
-            setIsSmallestScreen(window.matchMedia('(max-width: 375px)').matches);
-        };
-        checkMediaQueries();
-        window.addEventListener('resize', checkMediaQueries);
-        
-        return () => {
-            window.removeEventListener('resize', checkMediaQueries);
-        };
-    }, []);
 
 
     const handleToggleDrawer = () => {
@@ -57,22 +43,28 @@ export default function Header() {
     return (
         <header className="relative w-full">
             <div>
-                <div className={`mx-auto flex justify-between items-center container 2xl:px-7 2xl:py-7 xl:px-7 xl:py-7 lg:px-7 lg:py-7 md:px-7 md:py-7 sm:px-4 sm:py-4 ${isSmallScreen ? "px-4 py-4" : ""} ${isSmallestScreen ? "px-4 py-4" : ""} `}>
+                <div className="mx-auto flex justify-between items-center container 2xl:px-7 2xl:py-7 xl:px-7 xl:py-7 lg:px-7 lg:py-7 md:px-7 md:py-7 sm:px-4 sm:py-4 px-4 py-4 ">
                     <button
                         onClick={handleToggleDrawer}
-                        className={`2xl:hidden xl:hidden lg:hidden md:block  text-2xl sm:text-xl ${isSmallScreen ? "text-sm" : ""} `}
+                        className={`2xl:hidden xl:hidden lg:hidden md:block   sm:text-xl text-lg `}
                     >
                         <GiHamburgerMenu />
                     </button>
-                    <img src="/images/header/main-logo.webp" alt="" className={`2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-12 sm:pl-12 ${isSmallScreen ? "pl-12 w-[145px]" : "w-[145px]"} ${isSmallestScreen ? " w-[120px] " : ""}  mx-0`} />
+                    <img
+                        src="/images/header/main-logo.webp"
+                        alt="logo"
+                        className={`2xl:pl-0 xl:pl-0 lg:pl-0 md:pl-12 sm:pl-12 pl-12
+                        w-header-logo-default sm:w-header-logo-default  max-[375px]:w-logo-image-375 mx-0`}
+                    />
 
-                    
-                    <div className={`2xl:flex xl:flex lg:flex md:hidden sm:hidden ${isSmallScreen ? "hidden" : ""} w-fit bg-[#F0F0F0] rounded-[46px] border border-[#D2D3CE] gap-x-6 items-center font-bauhaus`}>
+
+
+                    <div className={`2xl:flex xl:flex lg:flex md:hidden sm:hidden hidden w-fit bg-[#F0F0F0] rounded-[46px] border border-[#D2D3CE] gap-x-6 items-center font-bauhaus`}>
                         {headerData.map((item, index) => (
                             <div key={index} className="px-1">
                                 <div className={` text-[16px] leading-[17.6px] font-normal hover:cursor-pointer
                                 ${activeIndex === index ? "text-[#ffffff] bg-primary px-[20.04px] py-3 rounded-[46px] text-[18px] leading-[19.8px] tracking-[0px] border border-[#D2D3CE]"
-                                    : "px-[20.04px] py-4 rounded-[46px] text-[18px] leading-[19.8px] text-primaryBlack"}`}
+                                        : "px-[20.04px] py-4 rounded-[46px] text-[18px] leading-[19.8px] text-primaryBlack"}`}
                                     onClick={() => handleActiveIndexToggle(index)}
                                 >
                                     {item.name}
@@ -80,22 +72,24 @@ export default function Header() {
                             </div>
                         ))}
                     </div>
-                        
+
                     <div className="flex items-center 2xl:gap-x-3 xl:gap-x-3 lg:gap-x-[4px] md:gap-x-[4px] sm:gap-x-[2px] ">
                         {sideHeaderData.map((item, index) => (
                             <div key={index} className="flex items-center">
-                                <img 
-                                    src={item.icon} 
-                                    alt={item.label} 
-                                    className={`bg-[#F0F0F0] 2xl:px-2 xl:px-2 lg:px-1 md:px-1 sm:px-1 ${isSmallScreen ? "w-6 px-1" : ""} object-center scale-100 aspect-square rounded-[1000px]`} 
+                                <img
+                                    src={item.icon}
+                                    alt={item.label}
+                                    className="bg-[#F0F0F0] object-center scale-100 aspect-square rounded-full 2xl:w-8 xl:w-8 lg:w-8 md:w-8 sm:w-8 
+                                        max-[640px]:w-header-icon-640 max-[640px]:px-2 px-1 w-6"
                                 />
+
                             </div>
                         ))}
                     </div>
                 </div>
             </div>
 
-            { isDrawerOpen && (
+            {isDrawerOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-50 z-50" onClick={handleToggleDrawer}></div>
             )}
 

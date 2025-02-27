@@ -1,6 +1,4 @@
 import { Inter } from 'next/font/google';
-import { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive'
 
 const interSans = Inter({
     variable: "--font-inter-sans",
@@ -9,25 +7,6 @@ const interSans = Inter({
 
 
 const Story = () => {
-
-
-    const [isSmallScreen, setIsSmallScreen] = useState(false);
-    const [isSmallestScreen, setIsSmallestScreen] = useState(false);
-
-    useEffect(() => {
-        const checkMediaQueries = () => {
-            setIsSmallScreen(window.matchMedia('(max-width: 640px)').matches);
-            setIsSmallestScreen(window.matchMedia('(max-width: 375px)').matches);
-        };
-        checkMediaQueries();
-        window.addEventListener('resize', checkMediaQueries);
-
-        return () => {
-            window.removeEventListener('resize', checkMediaQueries);
-        };
-    }, []);
-
-
 
     const storyData = [
         {
@@ -54,14 +33,14 @@ const Story = () => {
 
     return (
         <div className={`w-full mt-10 h-fit font-helveticaNeue bg-[#FAFAFA] `}>
-            <div className={`container mx-auto 2xl:py-[80px] xl:py-[80px] lg:py-[60px] md:py-[40px] sm:py-[26px] 2xl:px-7 xl:px-7 lg:px-7 md:px-4 sm:px-4 ${isSmallScreen ? "px-4 py-8" : ""} ${isSmallestScreen ? "px-4 py-4" : "" }`}>
+            <div className="container mx-auto 2xl:py-[80px] xl:py-[80px] lg:py-[60px] md:py-[40px] sm:py-[26px] 2xl:px-7 xl:px-7 lg:px-7 md:px-4 sm:px-4 px-4 py-6">
                 <div className='flex flex-col items-center justify-center w-full'>
-                    <button className={`py-[20px] px-[28px] sm:py-[25px] sm:px-[34px] rounded-[40px] bg-[#19737A17] text-primary font-bold  ${isSmallestScreen ? "text-[14px] py-4 px-4" : ""} leading-[17.91px] mb-10`}>
+                    <button className="2xl:py-[20px] 2xl:px-[28px] xl:py-[20px] xl:px-[28px] sm:py-[25px] sm:px-[34px] rounded-[40px] bg-[#19737A17] text-primary font-bold  text-[14px] py-4 px-6 leading-[17.91px] mb-10">
                         Steps
                     </button>
                     <h1 className={`font-bold 2xl:text-[48px] 2xl:leading-[57.6px] xl:text-[48px] xl:leading-[54px] 
                         lg:text-[42px] lg:leading-[46px] md:text-[40px] md:leading-[48px] sm:text-[40px] sm:leading-[40px] 
-                        ${isSmallestScreen ? "text-[20px] leading-6" : isSmallScreen ? "text-[32px] leading-8" : ""} 
+                       text-2xl leading-6
                         text-center tracking-[1%] text-[#161413] 2xl:w-[661px]`}>
                         The story and values behind our company
                     </h1>
@@ -75,9 +54,9 @@ const Story = () => {
                             className="flex items-start gap-6 bg-white rounded-[20px] p-6 shadow-sm hover:shadow-md transition-shadow"
                         >
 
-                            <div className={`flex-shrink-0 2xl:w-20 2xl:h-20 xl:w-16 xl:h-16 lg:w-16 lg:h-16 md:w-16 md:h-16 sm:w-14 sm:h-14 bg-primary rounded-xl flex items-center justify-center p-4 
+                            <div className="flex-shrink-0 2xl:w-20 2xl:h-20 xl:w-16 xl:h-16 lg:w-16 lg:h-16 md:w-16 md:h-16 sm:w-14 sm:h-14 bg-primary rounded-xl flex items-center justify-center 2xl:p-4 xl:p-4 lg:p-4 md:p-4 sm:p-4 
                             2xl:self-center xl:self-center lg:self-center md:self-center sm:self-center 
-                            ${isSmallestScreen ? "w-12 h-12  p-2 self-center" : isSmallScreen ? "w-14 h-14 p-3 self-center" : ""}`}>
+                            w-12 h-12  p-2 self-center">
                                 <img
                                     src={story.url}
                                     className="w-full h-full object-contain"
@@ -85,12 +64,12 @@ const Story = () => {
                             </div>
 
                             <div className="flex flex-col gap-2">
-                                <h2 className={`font-bold text-xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-base 
-                            ${isSmallestScreen ? "text-xs" : isSmallScreen ? "text-sm" : ""} text-[#242331] leading-tight`}>
+                                <h2 className={`font-bold  2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg sm:text-base 
+                            text-sm text-[#242331] leading-tight`}>
                                     {story.title}
                                 </h2>
-                                <p className={`text-[#797979] text-sm md:text-base leading-relaxed 
-                                        ${isSmallestScreen ? "text-xs break-all" : isSmallScreen ? "text-xs " : ""}`}>
+                                <p className="text-[#797979] 2xl:text-sm xl:text-sm lg:text-sm md:text-base sm:text-base leading-relaxed
+                                        text-xs ">
                                     {story.subTitle}
                                 </p>
                             </div>
@@ -100,9 +79,8 @@ const Story = () => {
 
 
                 <div className='flex justify-center items-center'>
-                    <button className={`${interSans.variable} text-[#252525] font-semibold 2xl:text-[14px] sm:text-[16px] mt-6
-                    ${isSmallestScreen ? "px-4 py-2 text-[12px]" : "px-6 py-3"} 
-                    border border-[#252525] tracking-0 sm:px-8 sm:py-3 rounded-full hover:cursor-pointer`}>
+                <button className={`${interSans.variable} text-primaryBlack font-semibold text-homepage-banner-button-375 sm:text-sm md:text-base mt-4 sm:px-6 sm:py-3 md:px-8 md:py-3 px-6 py-3 
+                    border border-primaryBlack tracking-0 rounded-full hover:cursor-pointer`}>
                         Shop Now
                     </button>
                 </div>

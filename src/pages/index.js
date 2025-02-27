@@ -22,7 +22,7 @@ export default function Home() {
       <BriefIntro/>
       <Story/>
       <HomePageBannerSecond/>
-      <Process/>
+      <Process/> 
     </div>
   );
 }
