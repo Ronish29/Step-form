@@ -63,7 +63,7 @@ const HomePageBannerSecond = () => {
                         <img 
                             src="/images/homepage-banner/banner-image.webp" 
                             alt="" 
-                            className="z-10 relative" 
+                            className="z-10 relative w-homepage-banner-image-375 max-w-sm:w-homepage-banner-image-640 sm:w-homepage-banner-image-default" 
                         />
                         <div className="bg-[#C8FFA6] absolute z-0 left-0 bottom-10 w-[90px] h-[92px] rounded-md"></div>
                     </div>
